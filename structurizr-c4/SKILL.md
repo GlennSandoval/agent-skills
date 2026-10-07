@@ -17,16 +17,17 @@ Produce a coherent architecture model with focused views that answer the user's 
 
 ## Model the architecture
 
-- Separate people, software systems, containers, and components. A C4 container is an application or data store, not necessarily a Docker container. Components describe responsibilities inside one container; folders and classes are not automatically components.
-- Use context views for the system's users and external dependencies; container views for its applications and stores; component views only when internal responsibilities need explanation. Use dynamic views for a specific interaction and deployment views for runtime placement.
-- Define elements once in the model and reuse them across views. Keep deployment infrastructure and instances separate from the logical model. Distinguish environments explicitly.
+- Model people, software systems, C4 containers, and components distinctly. C4 containers represent applications and data stores, not Docker containers; components describe responsibilities inside one container. Folders and classes are not automatically components.
+- Use system-context views for users and external dependencies, container views for applications and stores, and component views only when internal responsibilities need explanation. When adding deployment views, include system-context and container views alongside them to show logical scope as well as runtime placement. Use dynamic views for a specific interaction.
+- Define logical elements once in the model and reuse them across views. Declare deployment environments inside the `model` block; represent placement and infrastructure with deployment nodes and instances, separate from logical C4 containers.
 - Give elements meaningful names and concise responsibility descriptions. Add technologies when supported by evidence and useful at that level.
-- Make relationships directional and specific: who calls, publishes, reads, or writes what. Identify protocols where known. Avoid ambiguous labels such as “uses” when a more informative label is available.
+- Make relationships directional and specific: who calls, publishes, reads, or writes what. Identify protocols where known. Avoid ambiguous labels such as “uses” when a more informative label is available. Do not invent application-to-database or static-asset flows merely to complete a diagram.
 - Review implied relationships when adding lower-level dependencies. With Structurizr's default strategy, the first lower-level relationship can determine the parent-level description; inspect rolled-up labels and summarize explicitly when misleading rather than adding redundant parent relationships indiscriminately.
 
 ## Author and evolve DSL
 
-- Preserve element identifiers, explicit view keys, includes, and manual layout choices during edits. Renaming identifiers or view keys can disrupt references or layout continuity; do it only when needed and explain the impact.
+- Validate a small DSL skeleton early, before expanding the model. Deployment views must include `*`.
+- Preserve element identifiers, explicit view keys, includes, and manual layout choices during edits. Renaming identifiers or view keys can disrupt references or layout continuity; do it only when needed and explain the impact. In DSL-authored workspaces, treat `workspace.json` and `.structurizr/` as local renderer state unless someone deliberately adjusts that state and intends to preserve the layout.
 - Keep one canonical model. Split files with `!include` only when it improves ownership or readability; resolve include paths relative to their containing DSL files.
 - Add explicit, stable view keys for new views. Start new layouts with `autoLayout` unless the project has another convention. Keep inclusion rules focused on the question the diagram answers.
 - Use tags and styles consistently to communicate meaning. Do not copy renderer-specific styling into another format without checking support.
@@ -37,6 +38,10 @@ Produce a coherent architecture model with focused views that answer the user's 
 1. Run the repository's existing validation command against the entry workspace, including its dependencies. Otherwise use an available Structurizr parser/validator following the reference. Fix errors introduced by the change and rerun.
 2. Review semantics independently of syntax: boundaries, relationship direction, view scope, evidence, and consistency across levels. Parsing cannot establish architectural accuracy.
 3. When a renderer is available, inspect the affected views for readable labels, overlap, unexpected implied edges, missing context, clear scope and boundaries, and an understandable key for element types and styling. If the user requests exports, verify the exported result in that format.
+
+   Test deployment layout incrementally as relationships are added. In this workspace, container-instance flows rendered, but explicit deployment-node boundary links did not render; do not depend on those boundary links to communicate flows.
+
+   When starting a Docker viewer, record its container ID and use that ID when stopping it to avoid port conflicts.
 4. If tooling is unavailable, identify the source workspace and label any unperformed parser validation or visual inspection. Give an executable validation command only for a discovered project launcher. Otherwise show only the placeholder syntax from the reference (`<project Structurizr launcher> validate -workspace <entry workspace>`), state what must be installed, and do not substitute a guessed executable name. Do not claim success from text inspection alone.
 5. For edits, report changed files, the architectural change, validation results, and material assumptions. For review-only requests, report prioritized findings with the affected view or element, evidence, impact, and a concrete correction; report verification limits even when no findings are found. Update relevant documentation only within the requested scope.
 
