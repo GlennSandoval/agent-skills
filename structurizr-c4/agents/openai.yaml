@@ -1,0 +1,4 @@
+interface:
+  display_name: "Structurizr C4"
+  short_description: "Create, update, and review C4 models with Structurizr"
+  default_prompt: "Use $structurizr-c4 to create, update, or review C4 architecture models and verify the affected views."
