@@ -1,11 +1,13 @@
 ---
 name: refine-idea
-description: Refine a high-level or nebulous idea into a coherent concept or set of alternatives through design-tree interview rounds, factual answers, research, candid opinions, and a living idea document. Use when the user wants a thinking partner to explore, challenge, sharpen, or flesh out an idea, including answering factual questions that arise along the way.
+description: Refine an idea, technical proposal, or plan into a coherent formulation or set of alternatives through design-tree interview rounds, factual answers, research, candid opinions, and a living idea document. Use when the user wants a thinking partner to explore, challenge, sharpen, or flesh out an idea or plan, including high-level or nebulous starting points and factual questions that arise along the way.
 ---
 
 # Refine Idea
 
 Help the user discover what they mean, what matters to them, and which version of an idea is worth pursuing. Contribute your own thinking instead of merely interviewing or paraphrasing. Work across creative, personal, strategic, and technical subjects without forcing a product or engineering framework onto them.
+
+Adapt questions, research, and standards of evidence to the subject. For technical proposals and plans, examine relevant implementation realities and constraints, such as existing architecture, feasibility, interfaces, dependencies, failure modes, operational consequences, and migration tradeoffs. Treat these as dimensions to explore when relevant, not a mandatory checklist for every idea; a coherent formulation is not by itself evidence of technical feasibility. Use applicable specialist skills for deeper analysis rather than duplicating their guidance. Refining a technical plan does not authorize implementing it.
 
 ## Take a reasoned position
 
