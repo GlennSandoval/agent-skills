@@ -1,9 +1,9 @@
 ---
-name: idea-sparring
+name: refine-idea
 description: Refine a high-level or nebulous idea into a coherent concept or set of alternatives through design-tree interview rounds, factual answers, research, candid opinions, and a living idea document. Use when the user wants a thinking partner to explore, challenge, sharpen, or flesh out an idea, including answering factual questions that arise along the way.
 ---
 
-# Idea Sparring
+# Refine Idea
 
 Help the user discover what they mean, what matters to them, and which version of an idea is worth pursuing. Contribute your own thinking instead of merely interviewing or paraphrasing. Work across creative, personal, strategic, and technical subjects without forcing a product or engineering framework onto them.
 
@@ -26,15 +26,15 @@ Help the user discover what they mean, what matters to them, and which version o
 
 Start with a short, provisional interpretation of the idea and what seems promising, unclear, or in tension. If no idea has been supplied, ask for a rough starting point; fragments and contradictions are enough.
 
-Map the idea as a design tree: broad choices lead to more specific questions that depend on them. Include factual unknowns as well as decisions about purpose, audience, experience, scope, values, or direction, as relevant to the idea. Avoid imposing a product or engineering checklist.
+Map the idea as a design tree, distinguishing decision dependencies from exploratory subquestions. Some specific decisions require an earlier choice to be settled; other questions help resolve or sharpen a larger open question and can be explored before it is settled. Include factual unknowns as well as decisions about purpose, audience, experience, scope, values, or direction, as relevant to the idea. Avoid imposing a product or engineering checklist.
 
-Give nodes stable IDs and track their dependencies and status: open, awaiting research, proposed, settled, or explicitly deferred. Keep the map lightweight; expand it as answers reveal new branches. Do not invent every possible detail in advance. When an earlier answer changes, reopen the affected descendants rather than leaving incompatible decisions marked settled.
+Maintain the complete current design map in the living document as a worksheet the user can work through over conversational turns. Give nodes stable IDs and track their dependencies and status: open, awaiting research, proposed, settled, or explicitly deferred. Distinguish a question's place under a larger question from any actual prerequisites; nesting alone does not block exploration. Keep the map lightweight; expand it as answers reveal new branches. Completeness means preserving known questions and branches, not inventing every possible detail in advance. When an earlier answer changes, reopen the affected dependent decisions rather than leaving incompatible decisions marked settled.
 
 Treat an unaccepted recommendation as proposed, not settled. A prerequisite permits dependent questions to proceed only when it is settled or explicitly adopted as a working assumption by the user or within choices the user has delegated to you. Record working assumptions as provisional rather than settled decisions, and revisit dependent conclusions if they change. If a prerequisite is deferred without a working assumption, keep dependent questions blocked; deferral alone does not resolve them.
 
 ## Interview in rounds
 
-For each round, identify the frontier: unresolved questions whose prerequisites are settled or explicitly adopted as working assumptions. Ask the current frontier together, grouped for readability when large. Do not put a question in the same round as an unanswered question it depends on. Resolve factual prerequisites through research where possible; questions that depend on unfinished research wait unless authorized to proceed on a recorded working assumption, while independent branches can continue.
+For each round, identify the frontier: unresolved questions whose actual prerequisites are settled or explicitly adopted as working assumptions, including exploratory subquestions that can inform a larger unresolved question. Ask a coherent subset of that frontier that helps resolve or sharpen a larger open question, rather than presenting every available question at once. Briefly explain what the round is exploring. Keep unanswered questions visible in the worksheet. Do not put a question in the same round as an unanswered question it genuinely depends on; an exploratory subquestion is not blocked merely because the larger question remains open. Resolve factual prerequisites through research where possible; questions that depend on unfinished research wait unless authorized to proceed on a recorded working assumption, while independent branches can continue.
 
 Number questions with stable IDs, include a short title, and explain the decision or uncertainty being resolved. Choose the format that fits:
 
@@ -55,7 +55,7 @@ Choose A/B/C, adapt an option, or describe another audience.
 
 Answer direct factual questions when asked and then resume the interview. Contribute opinions, examples, alternatives, and constructive challenges alongside questions. If the user is unsure, give them something concrete to react to instead of repeating the question.
 
-Wait for the user's answers before asking the next round. Partial answers settle only the questions they actually resolve; silence does not accept a recommendation. After answers arrive, update the document, revise the tree, and compute the next frontier. If the user explicitly delegates choices to you, make provisional choices within that scope and record their basis as working assumptions, not settled user decisions.
+Wait for the user's answers before asking the next round. Partial answers settle only the questions they actually resolve; silence does not accept a recommendation. After answers arrive, update the document, revise the larger formulation and design tree, and select the next coherent subset of the frontier. Answered branches can advance while unanswered independent questions remain open. If the user explicitly delegates choices to you, make provisional choices within that scope and record their basis as working assumptions, not settled user decisions.
 
 ## Maintain a living idea document
 
