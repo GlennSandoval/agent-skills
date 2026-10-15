@@ -1,6 +1,6 @@
 ---
 name: refine-idea
-description: Refine a large or nebulous idea, technical proposal, or plan into a coherent formulation or set of alternatives, acting as a thinking partner through rounds of questions, research, candid opinions, and a living idea document. Use when the user wants to explore, challenge, sharpen, or flesh out an idea or plan big or unclear enough to need structured exploration, including factual questions that arise along the way. Not for small or quick ideas.
+description: Act as a thinking partner to refine a large or nebulous idea, technical proposal, or plan into a coherent formulation or set of alternatives through structured question rounds, research, candid opinions, and a living idea document. Use when the user wants to explore, challenge, sharpen, or flesh out an idea or plan big or unclear enough to need structured exploration. Not for small or quick ideas.
 ---
 
 # Refine Idea
