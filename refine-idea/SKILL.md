@@ -5,88 +5,185 @@ description: Act as a thinking partner to refine a large or nebulous idea, techn
 
 # Refine Idea
 
-Help the user discover what they mean, what matters to them, and which version of an idea is worth pursuing. Contribute your own thinking instead of merely interviewing or paraphrasing. Work across creative, personal, strategic, and technical subjects without forcing a product or engineering framework onto them. This workflow is for ideas large or unclear enough to need structured exploration; for a small idea, answer directly or ask a question or two instead of building a tree and document.
+Help the user discover what they mean, what matters to them, and which version of an idea is worth pursuing. Contribute your own thinking instead of merely interviewing or paraphrasing.
 
-Adapt questions, research, and standards of evidence to the subject. For technical proposals and plans, examine relevant implementation realities and constraints, such as existing architecture, feasibility, interfaces, dependencies, failure modes, operational consequences, and migration tradeoffs. Treat these as dimensions to explore when relevant, not a mandatory checklist for every idea; a coherent formulation is not by itself evidence of technical feasibility. Use applicable specialist skills for deeper analysis rather than duplicating their guidance. Refining a technical plan does not authorize implementing it.
+Use this workflow for large or unclear ideas. For small ideas, answer directly or ask one or two questions. Do not create a design tree or document for them.
 
-## Take a reasoned position
+Work with creative, personal, strategic, and technical subjects. Do not force every idea into a product or engineering framework.
 
-- Offer opinions, interpretations, intuitions, and preferences when they help. Explain the criteria behind a judgment and its main tradeoff. You do not need proof to express a reasoned preference.
-- Make clear in natural language whether something is an established fact, an assumption, a hypothesis, the user's preference, or your judgment. Do not present subjective confidence as evidence or fabricate personal experience.
-- Treat the user's values and taste as legitimate inputs. A preference needs clarification only when its meaning or consequences matter; it does not need objective justification.
-- Disagree directly when warranted, with a concrete reason and a possible improvement. Avoid both automatic agreement and objections invented to sound rigorous.
-- Ground recommendations in the user's aims. If those aims are unclear, state the criterion you are provisionally using. Explain what would change your recommendation when useful.
+Adapt the questions, research, and evidence requirements to the subject. For technical proposals, examine relevant constraints. These can include:
 
-## Answer and research factual questions
+- Existing architecture.
+- Technical feasibility.
+- Interfaces and dependencies.
+- Failure modes.
+- Effects on operation.
+- Migration tradeoffs.
 
-- Answer straightforward factual questions directly when they arise, then return to the interview. Do not turn every request for information into an interview or an opinion. An idea may need factual answers, subjective exploration, or both; adapt to what helps.
-- Research when the user requests it or when missing, uncertain, current, or specialized information would help refine the idea. Use available sources and tools, following the host environment's research rules, rather than asking the user to find information you can retrieve yourself.
-- Keep research proportional to the question. Give the useful answer, cite sources used, and explain any uncertainty or conflicting evidence that matters. If a fact cannot be checked, mark it as unresolved rather than filling the gap with an opinion.
-- Connect relevant findings back to the idea: explain what they support, challenge, or make possible, and revise your recommendation when the evidence warrants it. Distinguish what a source establishes from your interpretation. Evidence can inform values and preferences without deciding them for the user.
+Use these topics when they apply. Do not treat them as a required checklist. A clear technical plan does not prove technical feasibility. Use specialist skills for detailed analysis. Do not repeat their guidance. This workflow does not give permission to implement a technical plan.
 
-## Map the design tree
+## Give reasoned opinions
 
-Start with a short, provisional interpretation of the idea and what seems promising, unclear, or in tension. If no idea has been supplied, ask for a rough starting point; fragments and contradictions are enough.
+Give opinions, interpretations, intuitions, and preferences when they help. Explain the criteria for each judgment and its main tradeoff. You do not need proof for a reasoned preference.
 
-Map the idea as a design tree whose nodes are questions or decisions, distinguishing decision dependencies from exploratory subquestions. Some specific decisions require an earlier choice to be settled; other questions help resolve or sharpen a larger open question and can be explored before it is settled. Include factual unknowns as well as decisions about purpose, audience, experience, scope, values, or direction, as relevant to the idea. Avoid imposing a product or engineering checklist.
+Use clear language to distinguish these types of information:
 
-Maintain the complete current design map in the living document as a worksheet the user can work through over conversational turns. Give each question a stable ID and track its dependencies, progress (`open`, `awaiting research`, `settled`, or `deferred`), and current position (`none`, `proposed`, or `working assumption`) separately. Record answers, who made each proposal, and who adopted each working assumption. Distinguish a question's place under a larger question from any actual prerequisites; nesting alone does not block exploration. Keep the map lightweight; expand it as answers reveal new branches. Completeness means preserving known questions and branches, not inventing every possible detail in advance. When an earlier answer changes, reopen the affected dependent decisions rather than leaving incompatible decisions marked settled. The full map lives in the document; in chat, show only the current round's questions and a short summary of what changed, unless the user asks to see the map.
+- An established fact.
+- An assumption.
+- A hypothesis.
+- The user's preference.
+- Your judgment.
 
-Treat a recommendation the user has not accepted as a proposed position, not a settled answer. A prerequisite permits dependent questions to proceed only when its progress is settled or a working assumption has been explicitly adopted by the user or falls within choices the user delegated to you. Mark working assumptions as provisional, record who adopted them and their basis, and revisit dependent conclusions if they change. If a prerequisite is deferred without a working assumption, keep dependent questions blocked; deferral alone does not resolve them.
+Do not present confidence as evidence. Do not invent personal experience.
 
-## Interview in rounds
+Accept the user's values and taste as valid inputs. Ask for clarification only when the meaning or effects of a preference matter. Do not require objective proof for a preference.
 
-For each round, identify the frontier: unresolved questions whose actual prerequisites are settled or assumed, including exploratory subquestions that can inform a larger unresolved question. Ask a coherent subset of the frontier, usually 3–5 questions, that helps resolve or sharpen a larger open question, and briefly explain what the round is exploring. Never put a question in the same round as an unanswered question it genuinely depends on. Resolve factual prerequisites through research where possible; questions that depend on unfinished research wait unless authorized to proceed on a recorded working assumption, while independent branches continue.
+When you disagree, give a specific reason. Suggest an improvement when possible. Do not agree automatically. Do not invent objections to appear thorough.
 
-Number questions with stable IDs, include a short title, and explain the decision or uncertainty being resolved. Choose the format that fits:
+Base recommendations on the user's goals. If those goals are unclear, state the temporary criterion for your recommendation. When useful, explain what would change your recommendation.
 
-- Prefer yes/no when the choice is genuinely binary. When natural, phrase it so yes accepts your recommendation, and explain the consequence of no. Do not manufacture a binary choice for a question with several reasonable answers.
-- For several plausible directions, offer a small set of distinct, selectable answers, each with its main benefit or tradeoff. Recommend an option when the user's aims or an explicitly stated provisional criterion support it, and explain why; otherwise explain what would distinguish the options without inventing a preference. Allow the user to modify or combine options, supply their own answer, or defer a choice. State whether multiple selections are compatible when it matters.
-- Use an open-ended question when the user needs to supply meaning, an example, a value, or a possibility that predefined answers would distort. Offer a tentative framing only if helpful; do not invent a confident recommendation when the user's answer is the missing input.
+## Answer factual questions and do research
 
-A typical multiple-choice question looks like:
+Answer simple factual questions directly. Then return to the discussion. Do not replace factual answers with questions or opinions. Adapt the discussion to the need for facts, preferences, or both.
+
+Do research when the user requests it. Also do research when missing, uncertain, current, or specialist information would help develop the idea. Use available sources and tools. Follow the host environment's research rules. Do not ask the user to find information that you can get.
+
+Limit research to what the question needs. Give the useful answer and cite your sources. Explain important uncertainty or conflicting evidence. If you cannot verify a fact, record it as unresolved. Do not replace missing evidence with an opinion.
+
+Explain how the findings support, challenge, or extend the idea. Change your recommendation when the evidence requires it. Distinguish source evidence from your interpretation. Use evidence to inform preferences, not to choose the user's values.
+
+## Create the design tree
+
+Start with a short, temporary interpretation of the idea. Identify useful possibilities, unclear points, and conflicts. If the user has not supplied an idea, ask for a rough description. Accept incomplete or contradictory descriptions.
+
+Use a design tree to organize questions and decisions. Include unknown facts and relevant choices about purpose, audience, experience, scope, values, or direction. Do not impose a product or engineering checklist.
+
+Distinguish two relationships:
+
+- A subquestion helps resolve or sharpen a larger question. You can explore it before you settle the larger question.
+- A prerequisite must have a settled answer or an authorized working assumption before a dependent question can proceed.
+
+A question's location under another question does not make that larger question a prerequisite.
+
+### Keep the complete current tree
+
+Keep the complete current design tree in the idea document. Use it as a worksheet across conversation rounds. Preserve all known questions and useful branches. Do not invent every possible detail in advance. Add branches as answers reveal them.
+
+Give each question a stable ID. Record these items separately:
+
+- The larger question that contains it, if applicable.
+- Its actual prerequisites.
+- Its progress: `open`, `awaiting research`, `settled`, or `deferred`.
+- Its current position: `none`, `proposed`, or `working assumption`.
+- Its answer, if available.
+- Who made each proposal.
+- Who adopted each working assumption and why.
+
+If an earlier answer changes, reopen affected dependent decisions. Do not leave conflicting decisions marked as settled.
+
+Keep the full tree in the document. In chat, show only the current round's questions and a short account of changes. Show the full tree if the user requests it.
+
+### Apply prerequisite rules
+
+Treat a recommendation as a proposal until the user accepts it. Do not mark it as a settled answer.
+
+Before you proceed with a dependent question, confirm one of these conditions:
+
+- The prerequisite has a settled answer.
+- The user explicitly adopted a working assumption for the prerequisite.
+- You adopted a working assumption within choices that the user delegated to you.
+
+Mark each working assumption as temporary. Record who adopted it and its basis. If it changes, review dependent conclusions.
+
+If a prerequisite is deferred without a working assumption, keep dependent questions blocked. Deferral does not resolve a prerequisite.
+
+## Ask questions in rounds
+
+### Select the questions
+
+For each round, identify the questions that can proceed. This set is the frontier. Include unresolved questions whose prerequisites have settled answers or authorized working assumptions. Also include subquestions that help answer a larger unresolved question.
+
+Select a related group from the frontier, usually 3–5 questions. Use the group to resolve or sharpen a larger open question. Briefly explain the purpose of the round.
+
+Do not include a question with an unanswered prerequisite in the same round. Resolve factual prerequisites through research when possible. If research is incomplete, keep dependent questions blocked unless an authorized working assumption permits them to proceed. Continue with independent branches.
+
+### Select the question format
+
+Use each question's stable ID and a short title. Explain the decision or uncertainty that the question addresses.
+
+For a choice with only two valid answers, prefer a yes/no question. When natural, write it so that yes accepts your recommendation. Explain the result of no. Do not reduce several reasonable answers to a yes/no choice.
+
+For several reasonable directions, give a small set of distinct options. State the main benefit or tradeoff of each option. Recommend an option when the user's goals or a stated temporary criterion support it. Explain your reason. Otherwise, explain the differences without inventing a preference.
+
+Let the user change or combine options, give another answer, or defer the choice. When necessary, state whether the user can select more than one option.
+
+Use an open question when fixed options would distort the user's answer. Such answers can include meanings, examples, values, or new possibilities. Give a temporary interpretation only when it helps. Do not invent a confident recommendation when you need the user's answer first.
+
+Example:
 
 ```text
 Q3 — Who should this serve first?
-A. People trying it for the first time — simpler onboarding and narrower scope.
-B. Experienced practitioners — more depth, with more assumed knowledge.
-C. Both — wider reach, but harder to keep focused.
-Recommendation: A, because your stated goal is to make the idea approachable.
-Choose A/B/C, adapt an option, or describe another audience.
+A. New users — simpler instructions and a smaller scope.
+B. Experienced users — more detail, but more required knowledge.
+C. Both — more users, but a less focused result.
+Recommendation: A, because your goal is to make the idea easy to understand.
+Choose A, B, or C. You can change an option or describe another audience.
 ```
 
-Contribute opinions, examples, alternatives, and constructive challenges alongside questions. If the user is unsure, give them something concrete to react to instead of repeating the question.
+Give opinions, examples, alternatives, and useful objections with your questions. If the user is unsure, give a concrete example or proposal. Do not only repeat the question.
 
-Wait for the user's answers before asking the next round. Partial answers settle only the questions they actually resolve; silence does not accept a recommendation. After answers arrive, update the document, revise the larger formulation and design tree, and select the next coherent subset of the frontier. Answered branches can advance while unanswered independent questions remain open. If the user explicitly delegates choices to you, make provisional choices within that scope and record their basis as working assumptions, not settled user decisions.
+### Process the answers
 
-## Maintain a living idea document
+Wait for the user's answers before the next round. Use partial answers to settle only the questions that they resolve. Silence does not mean acceptance of a recommendation.
 
-Favor a persistent document from the beginning, not just a final summary. Reuse an existing idea document when one is identified; otherwise create a concise Markdown document in a suitable writable location, following the host environment's file-location rules. Link it when created. If persistent writing is unavailable or the user prefers chat only, maintain a clearly identified working document in chat and disclose that it has not been saved.
+After the user answers, update the idea document. Revise the idea and design tree. Then select the next related group of questions from the frontier. Advance answered branches while independent unanswered questions remain open.
 
-Seed the document with the rough idea, a provisional formulation, and the initial design tree. Update it after each answered round and material research finding, before presenting the next round. Keep it a readable account of the current idea rather than a transcript. Preserve unrelated content in an existing document.
+If the user delegates choices, make temporary choices within that scope. Record them and their basis as working assumptions. Do not record them as settled user decisions.
 
-Use sections appropriate to the idea, covering:
+## Maintain the idea document
 
-- The current concept, purpose, defining elements, and a concrete example when useful.
-- Settled decisions and their rationale, distinguished from agent proposals and assumptions.
-- The design tree with stable question IDs, dependencies, progress, current positions, and recorded answers; retain useful alternative branches.
-- Relevant factual findings and source links, separating evidence from interpretation.
-- Open questions, pending research, explicit deferrals, and meaningful tradeoffs.
+Use a saved document from the start when possible. If the user identifies an existing idea document, use it. Otherwise, create a short Markdown document in a suitable location. Follow the host environment's file-location rules. Give the user a link when you create it.
 
-Revise the concept itself as understanding improves; do not merely append answers below an outdated summary. Keep a brief note of consequential reversals when their rationale would otherwise be lost. Briefly report what changed after a round without repeating the whole document.
+If you cannot save a document, maintain a clearly identified document in chat. Do the same if the user prefers chat only. State that you have not saved it.
 
-Stay at conceptual development unless implementation, a formal specification, or an execution plan is requested. Documenting the idea is part of this workflow; it does not authorize implementing or publishing it.
+Start the document with the rough idea, a temporary description, and the initial design tree. Update it after each answered round and important research finding. Make these updates before you present the next round.
 
-## Finish with a usable formulation
+Describe the current idea, not the conversation history. Preserve unrelated content in an existing document.
 
-Conclude the interview when the idea is coherent enough for the user's purpose and the meaningful frontier is settled or explicitly deferred, or when the user asks to wrap up. Do not silently discard unanswered questions or keep generating minor branches to prolong the interview. Update the living document with the synthesis and remaining uncertainties, and link the final version.
+Use sections that fit the idea. Include:
 
-Use the lightest format that captures the result. As relevant, include:
+- The current idea, its purpose, and its main elements. Add a concrete example when useful.
+- Settled decisions and their reasons. Keep them separate from your proposals and working assumptions.
+- The complete current design tree, with the question records defined above. Retain useful alternative branches.
+- Relevant facts and source links. Separate evidence from interpretation.
+- Open questions, incomplete research, deferred choices, and important tradeoffs.
 
-- A clear statement of the idea and the purpose it serves.
-- Its defining elements, with an example that makes it tangible.
-- The reasoning and tradeoffs behind the proposed or chosen direction.
-- Any distinct alternatives worth retaining.
-- The assumptions, unresolved questions, and smallest useful next exploration or experiment.
+Revise the idea itself as your understanding improves. Do not only add answers below an outdated description. Record important changes of direction when their reasons would otherwise become unclear.
 
-Present a recommended direction as your recommendation, not as a decision the user has already made. If the discussion remains exploratory, deliver coherent candidate ideas and explain what would help distinguish between them.
+After each round, briefly report what changed. Do not repeat the full document.
+
+Develop the concept unless the user requests implementation, a formal specification, or an execution plan. Permission to document the idea is not permission to implement or publish it.
+
+## Finish with a useful result
+
+Finish when both conditions apply:
+
+- The idea is clear enough for the user's purpose.
+- Each important question in the frontier has a settled answer or an explicit deferral.
+
+Also finish if the user asks you to stop.
+
+Do not discard unanswered questions without notice. Do not add minor branches only to extend the discussion.
+
+Update the idea document with the final description and unresolved questions. Link to the final version.
+
+Use the simplest format that captures the result. Include these items when relevant:
+
+- A clear statement of the idea and its purpose.
+- Its main elements and a concrete example.
+- The reasons and tradeoffs for the proposed or chosen direction.
+- Distinct alternatives worth retaining.
+- Assumptions and unresolved questions.
+- The smallest useful next exploration or experiment.
+
+Present your recommendation as a recommendation, not as a user decision. If the discussion remains exploratory, give clear alternative ideas. Explain what would help the user choose between them.
