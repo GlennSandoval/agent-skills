@@ -14,6 +14,21 @@ shows *what* was built; documentation explains *why it was built this way* and
 humans and agents working in the codebase. See
 [Record decisions](#record-decisions) for when and where to record them.
 
+## When to use
+
+- Adding or changing a public API
+- Shipping a feature that changes user-facing behaviour
+- Onboarding new team members or agents to the project
+- Explaining the same thing repeatedly
+- Making or changing a significant technical decision
+- Writing or updating a README
+
+## When not to use
+
+- Documenting obvious code
+- Adding comments that restate what the code already says
+- Writing documentation for throwaway prototypes
+
 ## Writing style
 
 Unless explicitly instructed otherwise:
@@ -40,19 +55,6 @@ Unless explicitly instructed otherwise:
   product names, quoted text, and names fixed by external APIs, libraries,
   protocols, or file formats, such as `Cache-Control`, `setUTCHours`, or
   `color` in CSS and Mermaid.
-
-## When to use
-
-- Adding or changing a public API
-- Shipping a feature that changes user-facing behaviour
-- Onboarding new team members or agents to the project
-- Explaining the same thing repeatedly
-
-## When not to use
-
-- Documenting obvious code
-- Adding comments that restate what the code already says
-- Writing documentation for throwaway prototypes
 
 ## Record decisions
 
@@ -110,8 +112,8 @@ if (now - windowStart > WINDOW_SIZE_MS) {
 
 ### When not to comment
 
-Don't comment self-explanatory code, leave TODO comments for work you can do
-now, or leave commented-out code:
+Don't comment self-explanatory code, don't leave TODO comments for work you
+can do now, and don't leave commented-out code:
 
 ```typescript
 // Don't comment self-explanatory code
@@ -125,6 +127,9 @@ function calculateTotal(items: CartItem[]): number {
 // Don't leave commented-out code
 // const oldImplementation = () => { ... }  ← Delete it, git has history
 ```
+
+Use a TODO only for work that you cannot do now. Link it to an issue so that it
+does not become permanent.
 
 ### Document known gotchas
 
@@ -142,6 +147,22 @@ export function verifyWebhookSignature(rawBody: Buffer, signature: string): bool
 }
 ```
 
+## README
+
+A README helps a new reader understand and run the project. Update it when you
+change how the project is installed, run, built, or structured.
+
+A README includes the following:
+
+- A description of what the project does and who it is for
+- A quick start that gets a new reader to a working result
+- The commands to build, test, and run the project
+- An architecture overview, with links to decision records or design documents
+- Contributing guidance, or a link to it
+
+Check each command and path in the README against the project. Do not describe
+features that do not exist.
+
 ## API documentation
 
 API documentation describes the contract: what callers pass, what they get
@@ -153,7 +174,9 @@ function works internally, and don't restate the function name.
 Record public API changes in the API documentation.
 
 Document public APIs inline with types for TypeScript, or with an OpenAPI
-specification for REST APIs. The following sections show an example of each.
+specification for REST APIs. For other languages, use the standard
+documentation format of that language. The following sections show an example
+for each of the first two.
 
 ### Inline with types (preferred for TypeScript)
 
@@ -209,6 +232,7 @@ paths:
         '422':
           description: Validation error
 ```
+
 ## Common rationalisations
 
 | Rationalisation | Reality |
