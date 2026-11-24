@@ -1,6 +1,6 @@
 ---
 name: documentation
-description: Writes and maintains project documentation. Use when changing public APIs, shipping features, writing READMEs, changelogs or inline documentation, or when you need to record context that future engineers and agents will need to understand the codebase.
+description: Writes and maintains project documentation. Use when changing public APIs, shipping features, writing READMEs or inline documentation, or when you need to record context that future engineers and agents will need to understand the codebase.
 ---
 
 # Documentation
@@ -150,9 +150,7 @@ is the exception to commenting only the *why*, because a signature cannot
 express the full contract. Describe what callers can rely on, not how the
 function works internally, and don't restate the function name.
 
-Record public API changes in the API documentation. If a change affects users
-of the project, also record it in the changelog; see
-[Changelog maintenance](#changelog-maintenance).
+Record public API changes in the API documentation.
 
 Document public APIs inline with types for TypeScript, or with an OpenAPI
 specification for REST APIs. The following sections show an example of each.
@@ -248,38 +246,6 @@ Link to the project's decision records or design documentation, if any.
 How to contribute, coding standards, and the pull request process.
 ```
 
-## Changelog maintenance
-
-Keep a changelog (for example, `CHANGELOG.md`) that records every change that
-affects users of the project. Users include anyone who installs, calls, or runs
-it, so this covers new features, fixes, behaviour changes, deprecations, and
-removals. Leave out changes with no effect on users, such as internal
-refactoring or test changes.
-
-If the repository generates its changelog, for example from commit messages or
-changeset files, follow that process instead of editing the changelog directly.
-
-The following example shows a changelog entry:
-
-```markdown
-# Changelog
-
-## [1.2.0] - 2025-01-20
-
-### Added
-
-- Task sharing: users can share tasks with team members (#123)
-- Email notifications for task assignments (#124)
-
-### Fixed
-
-- Duplicate tasks appearing when rapidly clicking create button (#125)
-
-### Changed
-
-- Task list now loads 50 items per page (was 20) for better UX (#126)
-```
-
 ## Documentation for agents
 
 Maintain the following documentation so that AI agents have the context they
@@ -318,6 +284,5 @@ After documenting, check the following where relevant to the work:
 - [ ] Affected known gotchas are documented inline where they matter.
 - [ ] No commented-out code remains in the changed code.
 - [ ] Affected rules files, such as CLAUDE.md, are current and accurate.
-- [ ] Changes that affect users of the project are recorded in the changelog.
 - [ ] Significant decisions are recorded in the repository's usual location,
   with alternatives and consequences.
