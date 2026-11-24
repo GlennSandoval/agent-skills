@@ -147,21 +147,6 @@ export function verifyWebhookSignature(rawBody: Buffer, signature: string): bool
 }
 ```
 
-## README
-
-A README helps a new reader understand and run the project. Update it when you
-change how the project is installed, run, built, or structured.
-
-A README includes the following:
-
-- A description of what the project does and who it is for
-- A quick start that gets a new reader to a working result
-- The commands to build, test, and run the project
-- An architecture overview, with links to decision records or design documents
-- Contributing guidance, or a link to it
-
-Check each command and path in the README against the project. Do not describe
-features that do not exist.
 
 ## API documentation
 
@@ -245,7 +230,6 @@ paths:
 ## Red flags
 
 - Public APIs with no documentation or types
-- A README that doesn't explain how to run the project
 - Commented-out code instead of deletion
 - TODO comments that have been there for weeks
 - Documentation that restates the code instead of explaining intent
@@ -254,8 +238,6 @@ paths:
 
 After documenting, check the following where relevant to the work:
 
-- [ ] The affected README covers the description, quick start, commands,
-  architecture overview, and contributing guidance.
 - [ ] Affected public APIs describe parameters and return values beyond what
   their type signatures convey.
 - [ ] Affected known gotchas are documented inline where they matter.
