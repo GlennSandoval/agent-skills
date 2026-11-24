@@ -209,53 +209,6 @@ paths:
         '422':
           description: Validation error
 ```
-
-## README structure
-
-Every project that is not a throwaway prototype needs a README that covers the
-following:
-
-```markdown
-# Project name
-
-One-paragraph description of what this project does.
-
-## Quick start
-
-1. Clone the repository.
-2. Install dependencies: `npm install`
-3. Set up the environment: `cp .env.example .env`
-4. Run the development server: `npm run dev`
-
-## Commands
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start the development server |
-| `npm test` | Run tests |
-| `npm run build` | Create a production build |
-| `npm run lint` | Run the linter |
-
-## Architecture
-
-Brief overview of the project structure and key design decisions.
-Link to the project's decision records or design documentation, if any.
-
-## Contributing
-
-How to contribute, coding standards, and the pull request process.
-```
-
-## Documentation for agents
-
-Maintain the following documentation so that AI agents have the context they
-need:
-
-- **Rules files, such as CLAUDE.md:** Document project conventions so agents
-  follow them, including where the repository records decisions.
-- **Spec files:** Keep specs updated so agents build the right thing.
-- **Inline gotchas:** Prevent agents from falling into known traps.
-
 ## Common rationalisations
 
 | Rationalisation | Reality |
